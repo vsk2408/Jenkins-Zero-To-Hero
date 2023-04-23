@@ -1,11 +1,7 @@
 pipeline {
-    agent any {
-        stages {
-            stage {
-                steps ('Git Clone') {
-                    'git branch: 'main', url: 'https://github.com/vsk2408/Jenkins-Zero-To-Hero.git'
-                }
-            }
-        }
+    agent any
+    
+    stage ('Git Clone') {
+        git branch: 'main', url: 'https://github.com/vsk2408/Jenkins-Zero-To-Hero.git'
     }
 }
